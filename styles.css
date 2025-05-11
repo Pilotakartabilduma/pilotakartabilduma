@@ -304,3 +304,28 @@ body.historia main section {
     width: 70px;
   }
 }
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en móvil */
+    gap: 20px;
+    padding: 1em;
+  }
+
+  .cromo {
+    width: 100%;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    padding: 0 10px;
+  }
+
+  .logo-container img {
+    width: 70px;
+  }
+
+  .volver-container {
+    padding: 1em;
+  }
+}
