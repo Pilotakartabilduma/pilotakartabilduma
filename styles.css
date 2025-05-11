@@ -207,3 +207,61 @@ body.historia main section {
   line-height: 1.6;
   color: #f0f0f0;  /* solo si el fondo es oscuro */
 }
+/* ===== RESPONSIVE DESIGN PARA MÓVILES ===== */
+@media (max-width: 768px) {
+
+  /* Encabezado */
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+  }
+
+  .header-content h1 {
+    font-size: 1.4em;
+    margin: 1em 0;
+  }
+
+  .logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+
+  /* Menú */
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  /* Contenido principal */
+  main section {
+    padding: 1em;
+    font-size: 1rem; /* ajusta tamaño de fuente para móviles */
+  }
+
+  /* Galería */
+  .galeria {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 20px;
+  }
+
+  .galeria img {
+    width: 100%;
+    max-width: 160px;
+  }
+
+  /* Carrusel */
+  .carrusel {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Texto más pequeño si es necesario */
+  body {
+    font-size: 16px;
+  }
+}
