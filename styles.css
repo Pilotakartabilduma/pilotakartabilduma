@@ -1,0 +1,209 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("img/fondo.jpg");
+  background-size: cover;
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 1em;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* Galería de cromos */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.galeria img {
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none; /* Se muestra con JS */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.volver-container {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.boton.volver {
+  background-color: #28a745; /* verde */
+}
+/* Menú sencillo */
+.menu {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Menú horizontal */
+  justify-content: center; /* Centra los elementos */
+}
+
+.menu li {
+  margin: 0 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffbf00; /* Cambia el color al pasar el mouse */
+}
+/* Estilos generales para el header */
+header {
+  position: relative;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 3em;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.header-content h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+}
+.carrusel {
+  width: 220px;
+  height: 300px;
+  margin: 2em auto; /* Esto centra horizontalmente */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background: white;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.activo {
+  display: block;
+}
+html, body {
+  height: 100%;
+}
+.contenedor-horizontal {
+  display: flex;
+  justify-content: center; /* Centra el carrusel horizontalmente */
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+  box-sizing: border-box;
+}
+/* Solo en la página coleccion.html */
+body.coleccion {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+body.historia main section {
+  font-family: 'Georgia', serif;  /* o la que prefieras */
+  font-size: 22px;
+  line-height: 1.6;
+  color: #f0f0f0;  /* solo si el fondo es oscuro */
+}
