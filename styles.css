@@ -265,3 +265,42 @@ body.historia main section {
     font-size: 16px;
   }
 }
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14px;
+    padding: 0 10px; /* margen lateral para que no quede pegado al borde */
+  }
+
+  .header-content h1 {
+    font-size: 1.2em;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+
+  main section {
+    font-size: 1rem;
+    padding: 1em 0.5em;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 10px;
+  }
+
+  .galeria img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .carrusel {
+    width: 100%;
+    height: auto;
+  }
+
+  .logo {
+    width: 70px;
+  }
+}
