@@ -329,3 +329,15 @@ body.historia main section {
     padding: 1em;
   }
 }
+body.index {
+  margin: 0 10px;
+  background-attachment: scroll; /* Asegura que el fondo se mueva */
+  background-size: cover;
+  background-position: center;
+}
+body.historia {
+  margin: 0 10px;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+}
