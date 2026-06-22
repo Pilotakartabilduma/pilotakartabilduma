@@ -1,343 +1,142 @@
-/* General */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url("img/fondo.jpg");
-  background-size: cover;
-  background-position: center 100%;
-  background-repeat: no-repeat;
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:white;
 }
 
-header {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 1em;
+.hero{
+    min-height:100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("img/fondo_web.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
 }
 
-.boton {
-  display: inline-block;
-  margin-top: 1em;
-  padding: 0.8em 1.5em;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
+.logo{
+    max-width:700px;
+    width:90%;
+    margin-bottom:20px;
 }
 
-/* Galería de cromos */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
-  padding: 2em;
-  justify-content: center;
-  align-items: center;
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
 }
 
-.galeria img {
-  width: 220px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.2s;
+.subtitulo{
+    font-size:1.3rem;
+    max-width:800px;
+    margin-bottom:30px;
 }
 
-.galeria img:hover {
-  transform: scale(1.05);
+.botones{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
-/* Lightbox */
-.lightbox {
-  display: none; /* Se muestra con JS */
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
+.btn{
+    background:#c89b3c;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    transition:0.3s;
 }
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 8px;
+.btn:hover{
+    transform:scale(1.05);
 }
 
-#close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.volver-container {
-  text-align: center;
-  margin: 2em 0;
+.descripcion{
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:60px 20px;
 }
 
-.boton.volver {
-  background-color: #28a745; /* verde */
-}
-/* Menú sencillo */
-.menu {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
+.descripcion h2{
+    text-align:center;
+    margin-bottom:30px;
 }
 
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex; /* Menú horizontal */
-  justify-content: center; /* Centra los elementos */
+.descripcion p{
+    line-height:1.8;
+    font-size:1.1rem;
 }
 
-.menu li {
-  margin: 0 20px;
+.capturas{
+    padding:60px 20px;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
+.capturas h2{
+    text-align:center;
+    margin-bottom:40px;
 }
 
-.menu a:hover {
-  color: #ffbf00; /* Cambia el color al pasar el mouse */
-}
-/* Estilos generales para el header */
-header {
-  position: relative;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  padding: 3em;
-  text-align: center;
-}
+.galeria{
+    display:grid;
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+    grid-template-columns:
+        repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+
+    max-width:1400px;
+
+    margin:auto;
 }
 
-.logo-container {
-  flex: 0 0 auto;
+.galeria img{
+    width:100%;
+
+    border-radius:10px;
+
+    transition:0.3s;
 }
 
-.logo {
-  width: 100px;
-  height: auto;
+.galeria img:hover{
+    transform:scale(1.03);
 }
 
-.header-content h1 {
-  flex: 1;
-  text-align: center;
-  font-size: 1.5em;
-  margin: 0;
-}
-.carrusel {
-  width: 220px;
-  height: 300px;
-  margin: 2em auto; /* Esto centra horizontalmente */
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background: white;
+footer{
+    text-align:center;
+
+    padding:40px;
+
+    background:#000;
 }
 
-.slide {
-  display: none;
-  width: 100%;
-  height: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide.activo {
-  display: block;
-}
-html, body {
-  height: 100%;
-}
-.contenedor-horizontal {
-  display: flex;
-  justify-content: center; /* Centra el carrusel horizontalmente */
-  align-items: center;
-  width: 100%;
-  padding: 2em;
-  box-sizing: border-box;
-}
-/* Solo en la página coleccion.html */
-body.coleccion {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-body.historia main section {
-  font-family: 'Georgia', serif;  /* o la que prefieras */
-  font-size: 22px;
-  line-height: 1.6;
-  color: #f0f0f0;  /* solo si el fondo es oscuro */
-}
-/* ===== RESPONSIVE DESIGN PARA MÓVILES ===== */
-@media (max-width: 768px) {
-
-  /* Encabezado */
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-    text-align: center;
-  }
-
-  .header-content h1 {
-    font-size: 1.4em;
-    margin: 1em 0;
-  }
-
-  .logo {
-    width: 80px;
-    margin-bottom: 10px;
-  }
-
-  /* Menú */
-  .menu ul {
-    flex-direction: column;
-  }
-
-  .menu li {
-    margin: 10px 0;
-  }
-
-  /* Contenido principal */
-  main section {
-    padding: 1em;
-    font-size: 1rem; /* ajusta tamaño de fuente para móviles */
-  }
-
-  /* Galería */
-  .galeria {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
-    gap: 20px;
-  }
-
-  .galeria img {
-    width: 100%;
-    max-width: 160px;
-  }
-
-  /* Carrusel */
-  .carrusel {
-    width: 90%;
-    height: auto;
-  }
-
-  /* Texto más pequeño si es necesario */
-  body {
-    font-size: 16px;
-  }
-}
-@media (max-width: 768px) {
-
-  body {
-    font-size: 14px;
-    padding: 0 10px; /* margen lateral para que no quede pegado al borde */
-  }
-
-  .header-content h1 {
-    font-size: 1.2em;
-  }
-
-  .menu a {
-    font-size: 1rem;
-  }
-
-  main section {
-    font-size: 1rem;
-    padding: 1em 0.5em;
-  }
-
-  .galeria {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    gap: 10px;
-  }
-
-  .galeria img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .carrusel {
-    width: 100%;
-    height: auto;
-  }
-
-  .logo {
-    width: 70px;
-  }
-}
-@media (max-width: 768px) {
-  .galeria {
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas en móvil */
-    gap: 20px;
-    padding: 1em;
-  }
-
-  .cromo {
-    width: 100%;
-    height: auto;
-  }
-
-  header h1 {
-    font-size: 1.4rem;
-    padding: 0 10px;
-  }
-
-  .logo-container img {
-    width: 70px;
-  }
-
-  .volver-container {
-    padding: 1em;
-  }
-}
-body.index {
-  margin: 0 10px;
-  background-attachment: scroll; /* Asegura que el fondo se mueva */
-  background-size: cover;
-  background-position: center;
-}
-body.historia {
-  margin: 0 10px;
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: center;
+footer a{
+    color:#c89b3c;
 }
