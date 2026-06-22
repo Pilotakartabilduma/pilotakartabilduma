@@ -19,7 +19,7 @@ background-image:
         rgba(0,0,0,0.65),
         rgba(0,0,0,0.65)
     ),
-    url("img/fondo_web.png");
+    url("/pilotakartabilduma/img/fondo_web.png");
 
 background-size:cover;
 background-position:center;
@@ -214,9 +214,9 @@ box-shadow:0 0 40px rgba(0,0,0,0.7);
 
 .botonesInicio{
 display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+flex-direction:column;
+align-items:center;
+gap:15px;
 margin-top:25px;
 }
 
@@ -227,11 +227,11 @@ color:white;
 ```
 border:none;
 
-padding:18px 40px;
+padding:15px 25px;
 
 border-radius:8px;
 
-font-size:1.2rem;
+font-size:1.1rem;
 
 font-weight:bold;
 
@@ -239,7 +239,11 @@ cursor:pointer;
 
 text-decoration:none;
 
-display:inline-block;
+display:block;
+
+width:280px;
+
+text-align:center;
 
 transition:0.3s;
 ```
@@ -249,8 +253,6 @@ transition:0.3s;
 .btnInicio:hover{
 transform:scale(1.05);
 }
-
-/* SELECTOR IDIOMA */
 
 .idiomas{
 position:absolute;
