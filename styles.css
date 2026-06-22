@@ -11,29 +11,26 @@ color:white;
 }
 
 .hero{
-min-height:100vh;
+    min-height:100vh;
 
-```
-background-image:
-    linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.65)
-    ),
-    url("img/fondo_web.png");
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("/pilotakartabilduma/img/fondo_web.png");
 
-background-size:cover;
-background-position:center;
+    background-size:cover;
+    background-position:center;
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-text-align:center;
+    text-align:center;
 
-padding:20px;
-```
-
+    padding:20px;
 }
 
 .logo{
