@@ -89,6 +89,19 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+#contadorDescargas{
+margin-top:25px;
+
+font-family:'Airstrike', Arial, sans-serif;
+
+font-size:1.3rem;
+
+color:#ffcc00;
+
+text-align:center;
+
+}
+
 .descripcion{
 max-width:1000px;
 margin:auto;
