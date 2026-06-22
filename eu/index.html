@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="eu">
 
 <head>
@@ -8,162 +7,99 @@
 <title>Esku Pilota Card Game</title>
 
 <link rel="stylesheet" href="../styles.css">
+
 </head>
 
 <body>
 
-<!-- PANTAILA HASIERA -->
-
-<div id="pantallaInicio">
-
-
-<div class="contenidoInicio">
-
-```
-<img src="../img/banner.png" class="bannerInicio">
-
-<div class="botonesInicio">
-
-    <a href="../index.html" class="btnInicio">
-        🇪🇸 Castellano
-    </a>
-
-    <button onclick="cerrarPantallaInicio()" class="btnInicio">
-        🇪🇺 Euskara
-    </button>
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-<!-- HERO -->
-
 <header class="hero">
 
+    <img src="../img/logojuego.png" class="logo">
 
-<div class="idiomas">
+    <h1>Esku Pilota Card Game</h1>
 
-    <a href="../index.html">🇪🇸 Castellano</a>
+    <p class="subtitulo">
+        Android-erako euskal pilotako karta-jokoa
+    </p>
 
-    <a href="index.html">🇪🇺 Euskara</a>
+    <div class="botones">
 
-</div>
+        <a href="#" class="btn">
+            APK Deskargatu
+        </a>
 
-<img src="../img/logojuego.png" class="logo">
+        <a href="#trailer" class="btn">
+            Trailerra Ikusi
+        </a>
 
-<h1>Esku Pilota Card Game</h1>
+        <a href="mailto:pilotakartabilduma@gmail.com" class="btn">
+            Kontaktua
+        </a>
 
-<p class="subtitulo">
-    Android-erako euskal pilotako karta-jokoa
-</p>
-
-<div class="botones">
-
-    <a href="#" class="btn">
-        APK Deskargatu
-    </a>
-
-    <a href="#trailer" class="btn">
-        Trailerra Ikusi
-    </a>
-
-    <a href="mailto:pilotakartabilduma@gmail.com" class="btn">
-        Kontaktua
-    </a>
-
-</div>
-
+    </div>
 
 </header>
 
-<!-- DESKRIBAPENA -->
-
 <section class="descripcion">
 
+    <h2>Jokoari buruz</h2>
 
-<h2>Jokoari buruz</h2>
-
-<p>
-    Esku Pilota Card Game euskal pilotan inspiratutako karta-jokoa da.
-    Pilotari historikoak, legendak eta trebetasun-kartak konbinatuz estrategia
-    bereziak sortu eta ligetan, txapelketetan eta partida bakarretan lehiatu.
-</p>
-
+    <p>
+        Esku Pilota Card Game euskal pilotan inspiratutako karta-jokoa da.
+        Pilotari historikoak, legendak eta trebetasun-kartak konbinatuz estrategia bereziak sortu eta ligetan, txapelketetan eta partida bakarretan lehiatu.
+    </p>
 
 </section>
-
-<!-- TRAILERRA -->
 
 <section id="trailer" class="trailer">
 
+    <h2>Trailerra</h2>
 
-<h2>Trailerra</h2>
+    <div class="video-container">
 
-<div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/jdrND4BUj0c"
+            title="Esku Pilota Card Game"
+            allowfullscreen>
+        </iframe>
 
-    <iframe
-        src="https://www.youtube.com/embed/jdrND4BUj0c"
-        title="Esku Pilota Card Game"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-    </iframe>
-
-</div>
-
+    </div>
 
 </section>
-
-<!-- ARGAZKIAK -->
 
 <section class="capturas">
 
+    <h2>Irudiak</h2>
 
-<h2>Irudiak</h2>
+    <div class="galeria">
 
-<div class="galeria">
+        <img src="../img/captura_menu.png" onclick="abrirImagen(this.src)">
+        <img src="../img/captura_gameplay.png" onclick="abrirImagen(this.src)">
+        <img src="../img/captura_liga.png" onclick="abrirImagen(this.src)">
+        <img src="../img/captura_coleccion.png" onclick="abrirImagen(this.src)">
+        <img src="../img/captura_galeria.png" onclick="abrirImagen(this.src)">
+        <img src="../img/captura_torneo.png" onclick="abrirImagen(this.src)">
+        <img src="../img/captura-carta.png" onclick="abrirImagen(this.src)">
 
-    <img src="../img/captura_menu.png" onclick="abrirImagen(this.src)">
-    <img src="../img/captura_gameplay.png" onclick="abrirImagen(this.src)">
-    <img src="../img/captura_liga.png" onclick="abrirImagen(this.src)">
-    <img src="../img/captura_coleccion.png" onclick="abrirImagen(this.src)">
-    <img src="../img/captura_galeria.png" onclick="abrirImagen(this.src)">
-    <img src="../img/captura_torneo.png" onclick="abrirImagen(this.src)">
-    <img src="../img/captura-carta.png" onclick="abrirImagen(this.src)">
-
-</div>
-
+    </div>
 
 </section>
 
-<!-- OINA -->
-
 <footer>
 
+    <p>© 2026 Ashkorax Videogames</p>
 
-<p>
-    © 2026 Ashkorax Videogames
-</p>
+    <p>
+        <a href="mailto:pilotakartabilduma@gmail.com">
+            pilotakartabilduma@gmail.com
+        </a>
+    </p>
 
-<p>
-    Kontaktua:
-    <a href="mailto:pilotakartabilduma@gmail.com">
-        pilotakartabilduma@gmail.com
+    <a href="../politica.html">
+        Pribatutasun Politika
     </a>
-</p>
-
-<a href="../politica.html">
-    Pribatutasun Politika
-</a>
-
 
 </footer>
-
-<!-- IRUDI HANDITZAILEA -->
 
 <div id="visor" onclick="cerrarImagen()">
     <img id="imagenGrande">
@@ -180,11 +116,13 @@ function cerrarImagen(){
     document.getElementById("visor").style.display = "none";
 }
 
-function cerrarPantallaInicio(){
-    document.getElementById("pantallaInicio").style.display = "none";
-}
-
 </script>
 
 </body>
 </html>
+:::
+
+Haz commit de esto y luego prueba:
+
+```text
+https://pilotakartabilduma.github.io/pilotakartabilduma/eu/
