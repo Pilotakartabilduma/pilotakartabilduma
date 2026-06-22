@@ -172,3 +172,57 @@ margin-bottom:10px;
 footer a{
 color:#c89b3c;
 }
+
+#pantallaInicio{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.95);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:10000;
+}
+
+.contenidoInicio{
+    text-align:center;
+    max-width:1200px;
+    width:95%;
+}
+
+.bannerInicio{
+    width:100%;
+    max-width:1200px;
+
+    border-radius:12px;
+
+    box-shadow:0 0 40px rgba(0,0,0,0.7);
+}
+
+.btnInicio{
+    margin-top:25px;
+
+    background:#c89b3c;
+    color:white;
+
+    border:none;
+
+    padding:18px 40px;
+
+    border-radius:8px;
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.btnInicio:hover{
+    transform:scale(1.05);
+}
