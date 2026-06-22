@@ -1,1 +1,179 @@
+<!DOCTYPE html>
 
+<html lang="eu">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esku Pilota Card Game</title>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<!-- PANTAILA HASIERA -->
+
+<div id="pantallaInicio">
+
+
+<div class="contenidoInicio">
+
+    <img src="../img/banner.png" class="bannerInicio">
+
+    <button onclick="cerrarPantallaInicio()" class="btnInicio">
+        Webgunean sartu
+    </button>
+
+</div>
+
+
+</div>
+
+<!-- HERO -->
+
+<header class="hero">
+
+
+<div class="idiomas">
+
+    <a href="../index.html">🇪🇸 Castellano</a>
+
+    <a href="index.html">🇪🇺 Euskara</a>
+
+</div>
+
+<img src="../img/logojuego.png" class="logo">
+
+<h1>Esku Pilota Card Game</h1>
+
+<p class="subtitulo">
+    Android-erako euskal pilotako karta-jokoa
+</p>
+
+<div class="botones">
+
+    <a href="#" class="btn">
+        APK Deskargatu
+    </a>
+
+    <a href="#trailer" class="btn">
+        Trailerra Ikusi
+    </a>
+
+    <a href="mailto:pilotakartabilduma@gmail.com" class="btn">
+        Kontaktua
+    </a>
+
+</div>
+
+
+</header>
+
+<!-- DESKRIBAPENA -->
+
+<section class="descripcion">
+
+
+<h2>Jokoari buruz</h2>
+
+<p>
+    Esku Pilota Card Game euskal pilotan inspiratutako karta-jokoa da.
+    Pilotari historikoak, legendak eta trebetasun-kartak konbinatuz estrategia
+    bereziak sortu eta ligetan, txapelketetan eta partida bakarretan lehiatu.
+</p>
+
+
+</section>
+
+<!-- TRAILERRA -->
+
+<section id="trailer" class="trailer">
+
+
+<h2>Trailerra</h2>
+
+<div class="video-container">
+
+    <iframe
+        src="https://www.youtube.com/embed/jdrND4BUj0c"
+        title="Esku Pilota Card Game"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+</div>
+
+
+</section>
+
+<!-- ARGAZKIAK -->
+
+<section class="capturas">
+
+
+<h2>Irudiak</h2>
+
+<div class="galeria">
+
+    <img src="../img/captura_menu.png" onclick="abrirImagen(this.src)">
+    <img src="../img/captura_gameplay.png" onclick="abrirImagen(this.src)">
+    <img src="../img/captura_liga.png" onclick="abrirImagen(this.src)">
+    <img src="../img/captura_coleccion.png" onclick="abrirImagen(this.src)">
+    <img src="../img/captura_galeria.png" onclick="abrirImagen(this.src)">
+    <img src="../img/captura_torneo.png" onclick="abrirImagen(this.src)">
+    <img src="../img/captura-carta.png" onclick="abrirImagen(this.src)">
+
+</div>
+```
+
+</section>
+
+<!-- OINA -->
+
+<footer>
+
+
+<p>
+    © 2026 Ashkorax Videogames
+</p>
+
+<p>
+    Kontaktua:
+    <a href="mailto:pilotakartabilduma@gmail.com">
+        pilotakartabilduma@gmail.com
+    </a>
+</p>
+
+<a href="../politica.html">
+    Pribatutasun Politika
+</a>
+
+
+</footer>
+
+<!-- IRUDI HANDITZAILEA -->
+
+<div id="visor" onclick="cerrarImagen()">
+    <img id="imagenGrande">
+</div>
+
+<script>
+
+function abrirImagen(src){
+    document.getElementById("imagenGrande").src = src;
+    document.getElementById("visor").style.display = "flex";
+}
+
+function cerrarImagen(){
+    document.getElementById("visor").style.display = "none";
+}
+
+function cerrarPantallaInicio(){
+    document.getElementById("pantallaInicio").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
