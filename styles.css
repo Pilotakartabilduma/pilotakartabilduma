@@ -170,64 +170,6 @@ footer a{
     color:#c89b3c;
 }
 
-/* PANTALLA DE SELECCIÓN DE IDIOMA */
-
-#pantallaInicio{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,0.95);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    z-index:10000;
-}
-
-.contenidoInicio{
-    text-align:center;
-    width:95%;
-    max-width:1200px;
-}
-
-.bannerInicio{
-    width:100%;
-    border-radius:12px;
-    box-shadow:0 0 40px rgba(0,0,0,0.7);
-}
-
-.botonesInicio{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-    margin-top:25px;
-}
-
-.btnInicio{
-    background:#c89b3c;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:8px;
-    font-size:1.1rem;
-    font-weight:bold;
-    cursor:pointer;
-    text-decoration:none;
-    display:block;
-    width:280px;
-    text-align:center;
-    transition:0.3s;
-}
-
-.btnInicio:hover{
-    transform:scale(1.05);
-}
-
 /* MÓVIL */
 
 @media (max-width:768px){
@@ -252,13 +194,5 @@ footer a{
 
     .galeria{
         grid-template-columns:1fr;
-    }
-
-    .bannerInicio{
-        width:100%;
-    }
-
-    .btnInicio{
-        width:240px;
     }
 }
