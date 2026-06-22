@@ -125,7 +125,26 @@ function cerrarImagen(){
 }
 
 </script>
+<script>
 
+fetch("https://api.github.com/repos/Pilotakartabilduma/pilotakartabilduma/releases/latest")
+.then(response => response.json())
+.then(data => {
+
+    const descargas = data.assets[0].download_count;
+
+    document.getElementById("contadorDescargas").innerText =
+        "📥 Jokuaren deskargak: " + descargas;
+
+})
+.catch(error => {
+
+    document.getElementById("contadorDescargas").innerText =
+        "❌ Konexio errorea";
+
+});
+
+</script>
 </body>
 </html>
 
