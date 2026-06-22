@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,26 @@
 </head>
 
 <body>
+
+<!-- PANTALLA INICIAL -->
+
+<div id="pantallaInicio">
+
+```
+<div class="contenidoInicio">
+
+    <img src="img/banner.png" class="bannerInicio">
+
+    <button onclick="cerrarPantallaInicio()" class="btnInicio">
+        Entrar en la web
+    </button>
+
+</div>
+```
+
+</div>
+
+<!-- HERO -->
 
 <header class="hero">
 
@@ -41,6 +62,8 @@
 
 </header>
 
+<!-- DESCRIPCIÓN -->
+
 <section class="descripcion">
 
 ```
@@ -53,6 +76,8 @@
 ```
 
 </section>
+
+<!-- TRAILER -->
 
 <section id="trailer" class="trailer">
 
@@ -72,6 +97,8 @@
 ```
 
 </section>
+
+<!-- CAPTURAS -->
 
 <section class="capturas">
 
@@ -93,10 +120,14 @@
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
 ```
-<p>© 2026 Ashkorax Videogames</p>
+<p>
+    © 2026 Ashkorax Videogames
+</p>
 
 <p>
     Contacto:
@@ -112,6 +143,8 @@
 
 </footer>
 
+<!-- VISOR DE IMÁGENES -->
+
 <div id="visor" onclick="cerrarImagen()">
     <img id="imagenGrande">
 </div>
@@ -125,6 +158,10 @@ function abrirImagen(src){
 
 function cerrarImagen(){
     document.getElementById("visor").style.display = "none";
+}
+
+function cerrarPantallaInicio(){
+    document.getElementById("pantallaInicio").style.display = "none";
 }
 
 </script>
