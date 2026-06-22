@@ -134,6 +134,24 @@ function cerrarImagen(){
 }
 
 </script>
+<script>
 
+fetch("https://api.github.com/repos/Pilotakartabilduma/pilotakartabilduma/releases/latest")
+.then(response => response.json())
+.then(data => {
+
+    document.getElementById("contadorDescargas").innerText =
+        "✅ GitHub conectado correctamente";
+
+})
+.catch(error => {
+
+    document.getElementById("contadorDescargas").innerText =
+        "❌ Error de conexión";
+
+});
+
+</script>
+    
 </body>
 </html>
