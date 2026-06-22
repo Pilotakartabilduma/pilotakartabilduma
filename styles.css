@@ -194,6 +194,15 @@ color:#c89b3c;
     width:95%;
 }
 
+.botonesInicio{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+
 .bannerInicio{
     width:100%;
     max-width:1200px;
@@ -204,24 +213,29 @@ color:#c89b3c;
 }
 
 .btnInicio{
-    margin-top:25px;
+background:#c89b3c;
+color;
 
-    background:#c89b3c;
-    color:white;
+border:none;
 
-    border:none;
+padding:18px 40px;
 
-    padding:18px 40px;
+border-radius:8px;
 
-    border-radius:8px;
+font-size:1.2rem;
 
-    font-size:1.2rem;
+font-weight:bold;
 
-    font-weight:bold;
+cursor:pointer;
 
-    cursor:pointer;
+text-decoration:none;
+
+display:inline-block;
+
+transition:0.3s;
+
 }
 
-.btnInicio:hover{
-    transform:scale(1.05);
+.btnInicio{
+transform(1.05);
 }
