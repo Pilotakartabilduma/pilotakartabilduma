@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esku Pilota Card Game</title>
+
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="index">
-  <!-- Header -->
-  <header>
-    <div class="header-content">
-      <div class="logo-container">
-        <img src="img/logo-izquierdo.jpg" alt="Logo Izquierdo" class="logo">
-      </div>
 
-      <h1>Ongi Etorri esku pilota karta bildumara.</h1>
+<body>
 
-      <div class="logo-container right">
-        <img src="img/logo-derecho.jpg" alt="Logo Derecho" class="logo">
-      </div>
+<header class="hero">
+
+    <img src="img/logojuego.png" class="logo">
+
+    <h1>Esku Pilota Card Game</h1>
+
+    <p class="subtitulo">
+        El juego de cartas de pelota vasca para Android
+    </p>
+
+    <div class="botones">
+
+        <a href="#" class="btn">
+            Descargar APK
+        </a>
+
+        <a href="https://youtu.be/jdrND4BUj0c" target="_blank" class="btn">
+            Ver Tráiler
+        </a>
+
     </div>
 
-    <!-- Menú sencillo -->
-    <nav class="menu">
-      <ul>
-        <li><a href="mailto:pilotakartabilduma@gmail.com">Kontaktua</a></li>
-        <li><a href="archivos/guia-de-cromos.pdf" download="Guia_de_Cromos">Deskargak</a></li>
-        <li><a href="coleccion.html">Bilduma</a></li>
-        <li><a href="historia.html">Historia</a></li>
-      </ul>
-    </nav>
-  </header>
+</header>
 
-  <!-- Contenido principal -->
-  <main>
-    <div class="carrusel">
-      <div class="slide activo">
-        <img src="img/cromo1.jpg" alt="Cromo 1">
-      </div>
-      <div class="slide">
-        <img src="img/cromo2.jpg" alt="Cromo 2">
-      </div>
-      <div class="slide">
-        <img src="img/cromo3.jpg" alt="Cromo 3">
-      </div>
-      <div class="slide">
-        <img src="img/cromo25.jpg" alt="Cromo 25">
-      </div>
-      <div class="slide">
-        <img src="img/cromo47.jpg" alt="Cromo 47">
-      </div>
-      <div class="slide">
-        <img src="img/cromo44.jpg" alt="Cromo 44">
-      </div>
+<section class="descripcion">
+
+    <h2>Sobre el juego</h2>
+
+    <p>
+        Esku Pilota Card Game es un juego de cartas inspirado en la pelota mano vasca.
+        Combina pelotaris históricos, leyendas y cartas de habilidad para crear estrategias
+        únicas y competir en ligas, torneos y partidos individuales.
+    </p>
+
+</section>
+
+<section class="capturas">
+
+    <h2>Capturas</h2>
+
+    <div class="galeria">
+
+        <img src="img/captura_menu.png">
+        <img src="img/captura_gameplay.png">
+        <img src="img/captura_liga.png">
+        <img src="img/captura_coleccion.png">
+        <img src="img/captura_galeria.png">
+        <img src="img/captura_torneo.png">
+
     </div>
-  </main>
 
-  <!-- JavaScript embebido correctamente -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      let index = 0;
-      const slides = document.querySelectorAll('.slide');
+</section>
 
-      function mostrarSiguiente() {
-        slides[index].classList.remove('activo');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('activo');
-      }
+<footer>
 
-      setInterval(mostrarSiguiente, 3000);
-    });
-  </script>
+    <p>
+        © 2026 Ashkorax Videogames
+    </p>
+
+    <a href="politica.html">
+        Política de Privacidad
+    </a>
+
+</footer>
+
 </body>
 </html>
