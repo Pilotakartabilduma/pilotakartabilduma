@@ -11,29 +11,28 @@ color:white;
 }
 
 .hero{
-min-height:100vh;
+    min-height:100vh;
 
-```
-background-image:
-    linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.65)
-    ),
-    url("img/fondo_web.png");
+    background:red;
 
-background-size:cover;
-background-position:center;
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("img/fondo_web.png");
 
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+    background-size:cover;
+    background-position:center;
 
-text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-padding:20px;
-```
+    text-align:center;
 
+    padding:20px;
 }
 
 .logo{
