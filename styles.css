@@ -1,13 +1,13 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#111;
-color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:white;
 }
 
 .hero{
@@ -18,10 +18,11 @@ color:white;
             rgba(0,0,0,0.65),
             rgba(0,0,0,0.65)
         ),
-        url("/pilotakartabilduma/img/fondo_web.png");
+        url("img/fondo_web.png");
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
     flex-direction:column;
@@ -29,143 +30,235 @@ color:white;
     align-items:center;
 
     text-align:center;
-
     padding:20px;
 }
 
 .logo{
-max-width:700px;
-width:90%;
-margin-bottom:20px;
+    max-width:700px;
+    width:90%;
+    margin-bottom:20px;
 }
 
 .hero h1{
-font-size:3rem;
-margin-bottom:15px;
+    font-size:3rem;
+    margin-bottom:15px;
 }
 
 .subtitulo{
-font-size:1.3rem;
-max-width:800px;
-margin-bottom:30px;
+    font-size:1.3rem;
+    max-width:800px;
+    margin-bottom:30px;
 }
 
 .botones{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .btn{
-background:#c89b3c;
-color:white;
-text-decoration:none;
-padding:15px 30px;
-border-radius:8px;
-font-weight:bold;
-transition:0.3s;
+    background:#c89b3c;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
 .btn:hover{
-transform:scale(1.05);
+    transform:scale(1.05);
 }
 
 .descripcion{
-max-width:1000px;
-margin:auto;
-padding:60px 20px;
+    max-width:1000px;
+    margin:auto;
+    padding:60px 20px;
 }
 
 .descripcion h2{
-text-align:center;
-margin-bottom:30px;
+    text-align:center;
+    margin-bottom:30px;
 }
 
 .descripcion p{
-line-height:1.8;
-font-size:1.1rem;
+    line-height:1.8;
+    font-size:1.1rem;
 }
 
 .trailer{
-padding:60px 20px;
-text-align:center;
+    padding:60px 20px;
+    text-align:center;
 }
 
 .trailer h2{
-margin-bottom:30px;
+    margin-bottom:30px;
 }
 
 .video-container{
-max-width:1100px;
-margin:auto;
+    max-width:1100px;
+    margin:auto;
 }
 
 .video-container iframe{
-width:100%;
-aspect-ratio:16/9;
-border:none;
-border-radius:12px;
+    width:100%;
+    aspect-ratio:16/9;
+    border:none;
+    border-radius:12px;
 }
 
 .capturas{
-padding:60px 20px;
+    padding:60px 20px;
 }
 
 .capturas h2{
-text-align:center;
-margin-bottom:40px;
+    text-align:center;
+    margin-bottom:40px;
 }
 
 .galeria{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-max-width:1400px;
-margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    max-width:1400px;
+    margin:auto;
 }
 
 .galeria img{
-width:100%;
-border-radius:10px;
-transition:0.3s;
-cursor:pointer;
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+    cursor:pointer;
 }
 
 .galeria img:hover{
-transform:scale(1.03);
+    transform:scale(1.03);
 }
 
 #visor{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.92);
-justify-content:center;
-align-items:center;
-z-index:9999;
-cursor:pointer;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.92);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    cursor:pointer;
 }
 
 #imagenGrande{
-max-width:90%;
-max-height:90%;
-border-radius:12px;
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
 }
 
 footer{
-text-align:center;
-padding:40px;
-background:#000;
+    text-align:center;
+    padding:40px;
+    background:#000;
 }
 
 footer p{
-margin-bottom:10px;
+    margin-bottom:10px;
 }
 
 footer a{
-color:#c89b3c;
+    color:#c89b3c;
+}
+
+/* PANTALLA DE SELECCIÓN DE IDIOMA */
+
+#pantallaInicio{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.95);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:10000;
+}
+
+.contenidoInicio{
+    text-align:center;
+    width:95%;
+    max-width:1200px;
+}
+
+.bannerInicio{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 0 40px rgba(0,0,0,0.7);
+}
+
+.botonesInicio{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+.btnInicio{
+    background:#c89b3c;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:8px;
+    font-size:1.1rem;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    display:block;
+    width:280px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.btnInicio:hover{
+    transform:scale(1.05);
+}
+
+/* MÓVIL */
+
+@media (max-width:768px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .subtitulo{
+        font-size:1rem;
+    }
+
+    .botones{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:260px;
+        text-align:center;
+    }
+
+    .galeria{
+        grid-template-columns:1fr;
+    }
+
+    .bannerInicio{
+        width:100%;
+    }
+
+    .btnInicio{
+        width:240px;
+    }
 }
