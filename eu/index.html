@@ -134,16 +134,33 @@ fetch("https://api.github.com/repos/Pilotakartabilduma/pilotakartabilduma/releas
 .then(response => response.json())
 .then(data => {
 
-    const descargas = data.assets[0].download_count;
+    let apk = 0;
+    let windows = 0;
 
-    document.getElementById("contadorDescargas").innerText =
-        "📥 Jokuaren deskargak: " + descargas;
+    data.assets.forEach(asset => {
+
+        if(asset.name.endsWith(".apk")){
+            apk = asset.download_count;
+        }
+
+        if(asset.name.endsWith(".zip")){
+            windows = asset.download_count;
+        }
+
+    });
+
+    const total = apk + windows;
+
+    document.getElementById("contadorDescargas").innerHTML =
+        "📱 Android: " + apk +
+        " &nbsp;&nbsp; 💻 Windows: " + windows +
+        " &nbsp;&nbsp; 📥 Total: " + total;
 
 })
 .catch(error => {
 
     document.getElementById("contadorDescargas").innerText =
-        "❌ Konexio errorea";
+        "❌ Error de conexión";
 
 });
 
