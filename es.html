@@ -143,10 +143,27 @@ fetch("https://api.github.com/repos/Pilotakartabilduma/pilotakartabilduma/releas
 .then(response => response.json())
 .then(data => {
 
-    const descargas = data.assets[0].download_count;
-    
-    document.getElementById("contadorDescargas").innerText =
-        "🏆 Jugadores que han descargado el juego: " + descargas;
+    let apk = 0;
+    let windows = 0;
+
+    data.assets.forEach(asset => {
+
+        if(asset.name.endsWith(".apk")){
+            apk = asset.download_count;
+        }
+
+        if(asset.name.endsWith(".zip")){
+            windows = asset.download_count;
+        }
+
+    });
+
+    const total = apk + windows;
+
+    document.getElementById("contadorDescargas").innerHTML =
+        "📱 Android: " + apk +
+        " &nbsp;&nbsp; 💻 Windows: " + windows +
+        " &nbsp;&nbsp; 📥 Total: " + total;
 
 })
 .catch(error => {
@@ -157,6 +174,5 @@ fetch("https://api.github.com/repos/Pilotakartabilduma/pilotakartabilduma/releas
 });
 
 </script>
-    
 </body>
 </html>
